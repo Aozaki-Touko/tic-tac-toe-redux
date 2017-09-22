@@ -1,4 +1,4 @@
-NULLARRAY = {squares: Array(9).fill(null)};
+const NULLARRAY = {squares: Array(9).fill(null)};
 
 const history = (state = [NULLARRAY], action) => {
     switch(action.type){
