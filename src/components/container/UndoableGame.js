@@ -1,12 +1,27 @@
-import React from 'react';
-import Board from '../presentational/Board';
+import {connect} from 'react-redux';
+import Game from '../presentational/Game';
+import {jumpToStep,setStepNumber,setXIsNext} from '../../actions/index';
 
-class UndoableGame extends React.Component{
-    render(){
-        return (
-            <Board></Board>
-        )
+const mapStateToProps = (state)=>({
+    history: state.history,
+    stepNumber: state.stepNumber,
+    xIsNext: state.xIsNext,
+});
+
+
+const mapDispatchToProps = (dispatch) =>({
+    jumpToStep: (step) => {
+        dispatch(jumpToStep(step));
+    },
+
+    setStepNumber: (step) => {
+        dispatch(setStepNumber(step));
+    },
+
+    setXIsNext: (value)=>{
+        dispatch(setXIsNext(value));
     }
-}
+})
 
+const UndoableGame = connect(mapStateToProps,mapDispatchToProps)(Game);
 export default UndoableGame;
