@@ -1,11 +1,10 @@
-import React from 'react';
-import UndoableGame from '../container/UndoableGame';
+import React from "react";
+import UndoableGame from "../container/UndoableGame";
 
-
-const App = () =>(
-    <div>
-        <UndoableGame></UndoableGame>
-    </div> 
+const App = () => (
+  <div>
+    <UndoableGame />
+  </div>
 );
 
 export default App;

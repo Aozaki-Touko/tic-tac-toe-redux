@@ -1,14 +1,14 @@
-const xIsNext = (state=true, action)=>{
-    switch(action.type){
-        case 'SETXISNEXT':
-            return action.value;
+const xIsNext = (state = true, action) => {
+  switch (action.type) {
+    case "SETXISNEXT":
+      return action.value;
 
-        case 'FLIPENDTURN':
-            return !state;
+    case "FLIPENDTURN":
+      return !state;
 
-        default:
-            return state;
-    }
-}
+    default:
+      return state;
+  }
+};
 
 export default xIsNext;

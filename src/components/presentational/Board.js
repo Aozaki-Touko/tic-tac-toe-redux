@@ -1,12 +1,9 @@
-import React from 'react';
-import ClickableSquare from '../container/ClickableSquare';
+import React from "react";
+import ClickableSquare from "../container/ClickableSquare";
 
 class Board extends React.Component {
-
   renderSquare(i) {
-    return (
-      <ClickableSquare index={i}></ClickableSquare>
-    );
+    return <ClickableSquare index={i} />;
   }
 
   render() {
